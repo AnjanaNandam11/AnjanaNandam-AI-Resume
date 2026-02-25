@@ -45,6 +45,18 @@ const config: Config = {
           "0%": { opacity: "0", transform: "translateY(100%)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
+        "fairy-float": {
+          "0%":   { transform: "translate(0px, 0px) rotate(-4deg) scale(1)" },
+          "20%":  { transform: "translate(2px, -8px) rotate(0deg) scale(1.05)" },
+          "45%":  { transform: "translate(4px, -14px) rotate(5deg) scale(1)" },
+          "65%":  { transform: "translate(2px, -9px) rotate(3deg) scale(1.04)" },
+          "85%":  { transform: "translate(-1px, -3px) rotate(-1deg) scale(1)" },
+          "100%": { transform: "translate(0px, 0px) rotate(-4deg) scale(1)" },
+        },
+        "fairy-sparkle": {
+          "0%, 100%": { opacity: "0", transform: "scale(0) rotate(0deg)" },
+          "45%, 55%": { opacity: "1", transform: "scale(1) rotate(180deg)" },
+        },
       },
       animation: {
         "slide-in-right":
@@ -55,6 +67,8 @@ const config: Config = {
         pulse: "pulse 1.4s infinite ease-in-out",
         "scale-in": "scale-in 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards",
         "slide-up": "slide-up 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "fairy-float": "fairy-float 3.2s ease-in-out infinite",
+        "fairy-sparkle": "fairy-sparkle 2.6s ease-in-out infinite",
       },
       boxShadow: {
         glow: "0 0 20px rgba(219, 39, 119, 0.15)",
