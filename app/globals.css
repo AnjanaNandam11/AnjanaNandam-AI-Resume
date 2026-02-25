@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0a0f;
+  --foreground: #e8e8ed;
+}
+
+body {
+  color: var(--foreground);
+  background-color: var(--background);
+  background-image:
+    radial-gradient(ellipse at 15% 60%, rgba(219, 39, 119, 0.18) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 15%, rgba(236, 72, 153, 0.14) 0%, transparent 50%),
+    radial-gradient(ellipse at 60% 90%, rgba(190, 24, 93, 0.10) 0%, transparent 45%),
+    linear-gradient(rgba(219, 39, 119, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(219, 39, 119, 0.04) 1px, transparent 1px);
+  background-size: auto, auto, auto, 44px 44px, 44px 44px;
+  background-attachment: fixed;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a3a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a4a;
+}
+
+/* Component classes */
+@layer components {
+  .card {
+    @apply rounded-xl border border-white/[0.06] bg-surface p-6 transition-all duration-300;
+  }
+
+  .card:hover {
+    @apply border-accent/20 shadow-glow;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 font-medium text-white transition-all duration-200 hover:bg-accent-light hover:shadow-glow active:scale-[0.98];
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 rounded-lg border border-white/10 px-4 py-2 text-sm text-muted transition-all duration-200 hover:border-white/20 hover:text-white;
+  }
+
+  .chat-message {
+    @apply animate-fade-in rounded-xl px-4 py-3 text-sm leading-relaxed;
+  }
+
+  .chat-message-user {
+    @apply chat-message ml-8 bg-accent/15 text-white;
+  }
+
+  .chat-message-assistant {
+    @apply chat-message mr-8 bg-surface-light text-foreground;
+  }
+
+  .typing-dot {
+    @apply inline-block h-1.5 w-1.5 rounded-full bg-muted animate-pulse;
+  }
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #be185d 0%, #db2777 50%, #f472b6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Backdrop for drawer overlay */
+.drawer-backdrop {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+}
