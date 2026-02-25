@@ -43,4 +43,4 @@ export const HIGHLIGHT_CARDS: HighlightCard[] = [
 ];
 
 export const WELCOME_MESSAGE =
-  "Hi! I'm Bloom, Anjana's AI career advocate. I know her work inside and out. She's the kind who earns people's trust and delivers consistently. Ask me anything about her experience. Where should we start?";
+  "Hey! I'm Bloom. I know all the cool stuff Anjana has worked on. You can ask me anything about her experience, her vibe, what she's like to work with.";
