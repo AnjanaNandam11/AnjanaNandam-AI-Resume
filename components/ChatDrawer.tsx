@@ -70,7 +70,7 @@ export default function ChatDrawer() {
           <div className="flex items-center justify-between border-b border-white/[0.06] px-5 py-4 rounded-t-2xl">
             <div>
               <h2 className="text-sm font-semibold text-white">Bloom</h2>
-              <p className="text-xs text-muted">Anjana's AI Career Advocate</p>
+              <p className="text-xs text-muted">Anjana&apos;s AI Career Advocate</p>
             </div>
             <button
               onClick={() => setIsOpen(false)}
