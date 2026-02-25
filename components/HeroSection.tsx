@@ -1,12 +1,14 @@
 interface HeroSectionProps {
   name: string;
   currentRole: string;
+  additionalRoles: string;
   onChatOpen: () => void;
 }
 
 export default function HeroSection({
   name,
   currentRole,
+  additionalRoles,
   onChatOpen,
 }: HeroSectionProps) {
   return (
@@ -18,8 +20,11 @@ export default function HeroSection({
         <h1 className="mb-4 text-5xl font-bold tracking-tight sm:text-7xl">
           {name}
         </h1>
-        <p className="gradient-text mb-6 text-xl font-semibold sm:text-2xl">
+        <p className="gradient-text mb-2 text-xl font-semibold sm:text-2xl">
           {currentRole}
+        </p>
+        <p className="gradient-text mb-6 text-sm font-medium sm:text-base opacity-80">
+          {additionalRoles}
         </p>
         <p className="mx-auto mb-10 max-w-xl text-base leading-relaxed text-muted">
           Turning complex, ambiguous problems into clear, shippable outcomes

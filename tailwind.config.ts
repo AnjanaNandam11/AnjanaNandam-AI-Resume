@@ -41,6 +41,10 @@ const config: Config = {
           "0%": { opacity: "0", transform: "scale(0.95) translateY(8px)" },
           "100%": { opacity: "1", transform: "scale(1) translateY(0)" },
         },
+        "slide-up": {
+          "0%": { opacity: "0", transform: "translateY(100%)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         "slide-in-right":
@@ -50,6 +54,7 @@ const config: Config = {
         "fade-in": "fade-in 0.4s ease-out forwards",
         pulse: "pulse 1.4s infinite ease-in-out",
         "scale-in": "scale-in 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "slide-up": "slide-up 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards",
       },
       boxShadow: {
         glow: "0 0 20px rgba(219, 39, 119, 0.15)",

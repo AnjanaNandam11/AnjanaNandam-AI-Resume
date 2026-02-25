@@ -8,42 +8,19 @@ import ChatProvider, { useChatDrawer } from "./ChatProvider";
 function PageInner({
   name,
   currentRole,
+  additionalRoles,
 }: {
   name: string;
   currentRole: string;
+  additionalRoles: string;
 }) {
   const { setIsOpen } = useChatDrawer();
 
   return (
     <>
       <main className="min-h-screen">
-        <HeroSection
-          name={name}
-          currentRole={currentRole}
-          onChatOpen={() => setIsOpen(true)}
-        />
+        <HeroSection name={name} currentRole={currentRole} additionalRoles={additionalRoles} onChatOpen={() => setIsOpen(true)} />
         <HighlightCards />
-
-        {/* Bottom CTA */}
-        <section className="pb-20 text-center">
-          <p className="mb-4 text-sm text-muted">Want to learn more?</p>
-          <button onClick={() => setIsOpen(true)} className="btn-ghost">
-            <svg
-              className="h-4 w-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-              />
-            </svg>
-            Ask My AI Advocate
-          </button>
-        </section>
       </main>
 
       {/* Footer */}
@@ -92,13 +69,15 @@ function PageInner({
 export default function PageContent({
   name,
   currentRole,
+  additionalRoles,
 }: {
   name: string;
   currentRole: string;
+  additionalRoles: string;
 }) {
   return (
     <ChatProvider>
-      <PageInner name={name} currentRole={currentRole} />
+      <PageInner name={name} currentRole={currentRole} additionalRoles={additionalRoles} />
     </ChatProvider>
   );
 }
